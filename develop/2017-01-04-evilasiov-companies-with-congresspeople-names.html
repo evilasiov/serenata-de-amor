@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>2016-01-04-evilasiov-companies-with-congresspeople-names</title>
+<title>2017-01-04-evilasiov-companies-with-congresspeople-names</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -11687,18 +11687,6 @@ ul.typeahead-list > li > a {
 .ansi-bold { font-weight: bold; }
 
     </style>
-<style type="text/css">
-    #notebook,
-.output_area pre {
-  font-size: 18px;
-}
-
-.CodeMirror {
-  font-family: Monaco;
-  font-size: 20px;
-}
-
-    </style>
 
 
 <style type="text/css">
@@ -11770,13 +11758,13 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">serenata_toolbox.datasets</span> <span class="k">import</span> <span class="n">fetch</span>
 
 <span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;2016-12-06-reimbursements.xz&#39;</span><span class="p">,</span> <span class="s1">&#39;../data&#39;</span><span class="p">)</span>
-<span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;2016-12-06-companies.xz&#39;</span><span class="p">,</span> <span class="s1">&#39;../data&#39;</span><span class="p">)</span>
+<span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;2016-09-03-companies.xz&#39;</span><span class="p">,</span> <span class="s1">&#39;../data&#39;</span><span class="p">)</span>
 <span class="n">fetch</span><span class="p">(</span><span class="s1">&#39;2016-12-21-deputies.xz&#39;</span><span class="p">,</span> <span class="s1">&#39;../data&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -11787,15 +11775,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="n">reimbursements</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/2016-12-06-reimbursements.xz&#39;</span><span class="p">,</span>
-                             <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cnpj_cpf&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">str</span><span class="p">},</span>
-                             <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/2016-12-06-reimbursements.xz&#39;</span><span class="p">,</span>
+                   <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cnpj_cpf&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">str</span><span class="p">},</span>
+                   <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11805,10 +11793,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reimbursements</span><span class="p">[</span><span class="s1">&#39;supplier&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;supplier&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11819,7 +11807,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[3]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -11836,10 +11824,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">reimbursements</span><span class="p">[</span><span class="s1">&#39;congressperson_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;congressperson_name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11850,7 +11838,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -11866,7 +11854,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">deputies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/2016-12-21-deputies.xz&#39;</span><span class="p">,</span>
@@ -11882,7 +11870,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -11931,14 +11919,57 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Looking for exact matches of names (in supplier names).</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">unicodedata</span>
+
+<span class="k">def</span> <span class="nf">normalize_string</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">nfkd_form</span> <span class="o">=</span> <span class="n">unicodedata</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="s1">&#39;NFKD&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">nfkd_form</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ASCII&#39;</span><span class="p">,</span> <span class="s1">&#39;ignore&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">congressperson_name</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">congressperson_name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_string</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">supplier</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">supplier</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_string</span><span class="p">)</span>
+<span class="n">deputies</span><span class="o">.</span><span class="n">civil_name</span> <span class="o">=</span> <span class="n">deputies</span><span class="o">.</span><span class="n">civil_name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_string</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">supplier_has_congressperson_name</span> <span class="o">=</span> \
-    <span class="n">reimbursements</span><span class="p">[</span><span class="s1">&#39;supplier&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">deputies</span><span class="p">[</span><span class="s1">&#39;civil_name&#39;</span><span class="p">])</span>
-<span class="n">reimbursements</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">supplier_has_congressperson_name</span><span class="p">,</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;supplier&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">deputies</span><span class="p">[</span><span class="s1">&#39;civil_name&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">supplier_has_congressperson_name</span><span class="p">,</span>
                    <span class="p">[</span><span class="s1">&#39;issue_date&#39;</span><span class="p">,</span> <span class="s1">&#39;congressperson_name&#39;</span><span class="p">,</span> <span class="s1">&#39;supplier&#39;</span><span class="p">,</span> <span class="s1">&#39;subquota_description&#39;</span><span class="p">,</span> <span class="s1">&#39;cnpj_cpf&#39;</span><span class="p">,</span> <span class="s1">&#39;document_id&#39;</span><span class="p">,</span> <span class="s1">&#39;total_net_value&#39;</span><span class="p">]]</span>
 </pre></div>
 
@@ -11950,7 +11981,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -11971,8 +12002,8 @@ div#notebook {
     <tr>
       <th>200406</th>
       <td>2010-12-28T00:00:00</td>
-      <td>MARCELO CASTRO</td>
-      <td>MARCELO COSTA E CASTRO</td>
+      <td>marcelo castro</td>
+      <td>marcelo costa e castro</td>
       <td>Flight tickets</td>
       <td>04114985000137</td>
       <td>1985323</td>
@@ -11981,8 +12012,8 @@ div#notebook {
     <tr>
       <th>204127</th>
       <td>2010-08-27T00:00:00</td>
-      <td>PAULO MAGALHÃES</td>
-      <td>PAULO SÉRGIO PARANHOS DE MAGALHÃES</td>
+      <td>paulo magalhaes</td>
+      <td>paulo sergio paranhos de magalhaes</td>
       <td>Consultancy, research and technical work</td>
       <td>06253998000112</td>
       <td>1919603</td>
@@ -11991,8 +12022,8 @@ div#notebook {
     <tr>
       <th>233647</th>
       <td>2010-07-06T00:00:00</td>
-      <td>CARLOS MANATO</td>
-      <td>CARLOS HUMBERTO MANNATO</td>
+      <td>carlos manato</td>
+      <td>carlos humberto mannato</td>
       <td>Telecommunication</td>
       <td>04164616000159</td>
       <td>1893988</td>
@@ -12001,8 +12032,8 @@ div#notebook {
     <tr>
       <th>233652</th>
       <td>2010-07-19T00:00:00</td>
-      <td>CARLOS MANATO</td>
-      <td>CARLOS HUMBERTO MANNATO</td>
+      <td>carlos manato</td>
+      <td>carlos humberto mannato</td>
       <td>Automotive vehicle renting or watercraft charter</td>
       <td>57480788720</td>
       <td>1894078</td>
@@ -12011,8 +12042,8 @@ div#notebook {
     <tr>
       <th>295219</th>
       <td>2010-01-25T00:00:00</td>
-      <td>LAERTE BESSA</td>
-      <td>LAERTE RODRIGUES DE BESSA</td>
+      <td>laerte bessa</td>
+      <td>laerte rodrigues de bessa</td>
       <td>Flight tickets</td>
       <td>07575651000159</td>
       <td>1763526</td>
@@ -12021,8 +12052,8 @@ div#notebook {
     <tr>
       <th>295220</th>
       <td>2010-01-29T00:00:00</td>
-      <td>LAERTE BESSA</td>
-      <td>LAERTE RODRIGUES DE BESSA</td>
+      <td>laerte bessa</td>
+      <td>laerte rodrigues de bessa</td>
       <td>Flight tickets</td>
       <td>07575651000159</td>
       <td>1763527</td>
@@ -12031,18 +12062,58 @@ div#notebook {
     <tr>
       <th>296568</th>
       <td>2010-10-12T00:00:00</td>
-      <td>LELO COIMBRA</td>
-      <td>WELINGTON COIMBRA</td>
+      <td>lelo coimbra</td>
+      <td>welington coimbra</td>
       <td>Flight tickets</td>
       <td>34318100715</td>
       <td>1944297</td>
       <td>614.42</td>
     </tr>
     <tr>
+      <th>341245</th>
+      <td>2010-01-06T00:00:00</td>
+      <td>maia filho</td>
+      <td>jose de andrade maia filho</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>09967852007563</td>
+      <td>1775596</td>
+      <td>216.00</td>
+    </tr>
+    <tr>
+      <th>376127</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941983</td>
+      <td>483.59</td>
+    </tr>
+    <tr>
+      <th>376128</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941996</td>
+      <td>301.42</td>
+    </tr>
+    <tr>
+      <th>376129</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941999</td>
+      <td>614.16</td>
+    </tr>
+    <tr>
       <th>492105</th>
       <td>2011-08-02T00:00:00</td>
-      <td>DOMINGOS SÁVIO</td>
-      <td>DOMINGOS SÁVIO CAMPOS RESENDE</td>
+      <td>domingos savio</td>
+      <td>domingos savio campos resende</td>
       <td>Flight tickets</td>
       <td>22275150668</td>
       <td>2129592</td>
@@ -12051,8 +12122,8 @@ div#notebook {
     <tr>
       <th>571851</th>
       <td>2011-12-23T00:00:00</td>
-      <td>LIDERANÇA DO PT</td>
-      <td>LUIZ PAULO TEIXEIRA FERREIRA</td>
+      <td>lideranca do pt</td>
+      <td>luiz paulo teixeira ferreira</td>
       <td>Consultancy, research and technical work</td>
       <td>03606027000110</td>
       <td>2234319</td>
@@ -12061,8 +12132,8 @@ div#notebook {
     <tr>
       <th>695791</th>
       <td>2012-04-26T00:00:00</td>
-      <td>ZECA DIRCEU</td>
-      <td>JOSÉ CARLOS BECKER DE OLIVEIRA E SILVA</td>
+      <td>zeca dirceu</td>
+      <td>jose carlos becker de oliveira e silva</td>
       <td>Flight tickets</td>
       <td>02012862000160</td>
       <td>2351701</td>
@@ -12078,6 +12149,1362 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">companies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/2016-09-03-companies.xz&#39;</span><span class="p">,</span> <span class="n">low_memory</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">companies</span><span class="p">[</span><span class="s1">&#39;cnpj&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0    05.939.467/0001-15
+1    16.571.066/0001-71
+2    07.069.926/0001-82
+3    05.246.123/0001-20
+4    04.606.157/0001-16
+Name: cnpj, dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">companies</span><span class="p">[</span><span class="s1">&#39;cnpj&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">companies</span><span class="p">[</span><span class="s1">&#39;cnpj&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">r&#39;[\.\/\-]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">companies</span><span class="p">,</span>
+       <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span>
+       <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;cnpj_cpf&#39;</span><span class="p">,</span>
+       <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;cnpj&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_string</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">trade_name</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">trade_name</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">normalize_string</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">suspect_row</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">supplier</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">deputies</span><span class="p">[</span><span class="s1">&#39;civil_name&#39;</span><span class="p">])</span> <span class="o">|</span> <span class="n">data</span><span class="o">.</span><span class="n">name</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">deputies</span><span class="p">[</span><span class="s1">&#39;civil_name&#39;</span><span class="p">])</span> <span class="o">|</span> <span class="n">data</span><span class="o">.</span><span class="n">trade_name</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">deputies</span><span class="p">[</span><span class="s1">&#39;civil_name&#39;</span><span class="p">])</span> 
+<span class="n">data</span><span class="p">[</span><span class="n">suspect_row</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(14, 259)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">r&#39;(?:</span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">deputies</span><span class="o">.</span><span class="n">civil_name</span><span class="p">)))</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">supplier</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">name</span><span class="p">:</span> <span class="n">regex</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">name</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="n">rows</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(72, 259)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">rows</span><span class="p">,</span>
+         <span class="p">[</span><span class="s1">&#39;issue_date&#39;</span><span class="p">,</span> <span class="s1">&#39;congressperson_name&#39;</span><span class="p">,</span> <span class="s1">&#39;supplier&#39;</span><span class="p">,</span> <span class="s1">&#39;subquota_description&#39;</span><span class="p">,</span> <span class="s1">&#39;cnpj_cpf&#39;</span><span class="p">,</span> <span class="s1">&#39;document_id&#39;</span><span class="p">,</span> <span class="s1">&#39;total_net_value&#39;</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>issue_date</th>
+      <th>congressperson_name</th>
+      <th>supplier</th>
+      <th>subquota_description</th>
+      <th>cnpj_cpf</th>
+      <th>document_id</th>
+      <th>total_net_value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>73923</th>
+      <td>2009-06-06T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Locomotion, meal and lodging</td>
+      <td>92209790000561</td>
+      <td>1603993</td>
+      <td>207.67</td>
+    </tr>
+    <tr>
+      <th>73924</th>
+      <td>2009-05-26T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Locomotion, meal and lodging</td>
+      <td>92209790000138</td>
+      <td>1604000</td>
+      <td>101.68</td>
+    </tr>
+    <tr>
+      <th>73925</th>
+      <td>2009-05-26T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Locomotion, meal and lodging</td>
+      <td>92209790000561</td>
+      <td>1604001</td>
+      <td>129.42</td>
+    </tr>
+    <tr>
+      <th>74332</th>
+      <td>2009-10-03T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta joteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1689370</td>
+      <td>89.25</td>
+    </tr>
+    <tr>
+      <th>200406</th>
+      <td>2010-12-28T00:00:00</td>
+      <td>marcelo castro</td>
+      <td>marcelo costa e castro</td>
+      <td>Flight tickets</td>
+      <td>04114985000137</td>
+      <td>1985323</td>
+      <td>12000.00</td>
+    </tr>
+    <tr>
+      <th>204127</th>
+      <td>2010-08-27T00:00:00</td>
+      <td>paulo magalhaes</td>
+      <td>paulo sergio paranhos de magalhaes</td>
+      <td>Consultancy, research and technical work</td>
+      <td>06253998000112</td>
+      <td>1919603</td>
+      <td>8900.00</td>
+    </tr>
+    <tr>
+      <th>215985</th>
+      <td>2010-04-23T00:00:00</td>
+      <td>pompeo de mattos</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1839872</td>
+      <td>103.70</td>
+    </tr>
+    <tr>
+      <th>233647</th>
+      <td>2010-07-06T00:00:00</td>
+      <td>carlos manato</td>
+      <td>carlos humberto mannato</td>
+      <td>Telecommunication</td>
+      <td>04164616000159</td>
+      <td>1893988</td>
+      <td>361.92</td>
+    </tr>
+    <tr>
+      <th>233652</th>
+      <td>2010-07-19T00:00:00</td>
+      <td>carlos manato</td>
+      <td>carlos humberto mannato</td>
+      <td>Automotive vehicle renting or watercraft charter</td>
+      <td>57480788720</td>
+      <td>1894078</td>
+      <td>4500.00</td>
+    </tr>
+    <tr>
+      <th>255746</th>
+      <td>2010-03-12T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1803098</td>
+      <td>236.48</td>
+    </tr>
+    <tr>
+      <th>255873</th>
+      <td>2010-04-23T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1830066</td>
+      <td>175.80</td>
+    </tr>
+    <tr>
+      <th>256045</th>
+      <td>2010-04-30T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1850567</td>
+      <td>100.55</td>
+    </tr>
+    <tr>
+      <th>256290</th>
+      <td>2010-07-16T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1900932</td>
+      <td>88.55</td>
+    </tr>
+    <tr>
+      <th>256308</th>
+      <td>2010-08-12T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1909572</td>
+      <td>258.11</td>
+    </tr>
+    <tr>
+      <th>256328</th>
+      <td>2010-08-20T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1922951</td>
+      <td>258.11</td>
+    </tr>
+    <tr>
+      <th>256359</th>
+      <td>2010-10-08T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1938624</td>
+      <td>226.24</td>
+    </tr>
+    <tr>
+      <th>285424</th>
+      <td>2010-07-22T00:00:00</td>
+      <td>germano bonow</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1898819</td>
+      <td>89.25</td>
+    </tr>
+    <tr>
+      <th>295219</th>
+      <td>2010-01-25T00:00:00</td>
+      <td>laerte bessa</td>
+      <td>laerte rodrigues de bessa</td>
+      <td>Flight tickets</td>
+      <td>07575651000159</td>
+      <td>1763526</td>
+      <td>667.52</td>
+    </tr>
+    <tr>
+      <th>295220</th>
+      <td>2010-01-29T00:00:00</td>
+      <td>laerte bessa</td>
+      <td>laerte rodrigues de bessa</td>
+      <td>Flight tickets</td>
+      <td>07575651000159</td>
+      <td>1763527</td>
+      <td>774.52</td>
+    </tr>
+    <tr>
+      <th>296568</th>
+      <td>2010-10-12T00:00:00</td>
+      <td>lelo coimbra</td>
+      <td>welington coimbra</td>
+      <td>Flight tickets</td>
+      <td>34318100715</td>
+      <td>1944297</td>
+      <td>614.42</td>
+    </tr>
+    <tr>
+      <th>341245</th>
+      <td>2010-01-06T00:00:00</td>
+      <td>maia filho</td>
+      <td>jose de andrade maia filho</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>09967852007563</td>
+      <td>1775596</td>
+      <td>216.00</td>
+    </tr>
+    <tr>
+      <th>376127</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941983</td>
+      <td>483.59</td>
+    </tr>
+    <tr>
+      <th>376128</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941996</td>
+      <td>301.42</td>
+    </tr>
+    <tr>
+      <th>376129</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941999</td>
+      <td>614.16</td>
+    </tr>
+    <tr>
+      <th>416889</th>
+      <td>2011-08-19T00:00:00</td>
+      <td>onyx lorenzoni</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>2171818</td>
+      <td>154.50</td>
+    </tr>
+    <tr>
+      <th>427881</th>
+      <td>2011-01-08T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>1999813</td>
+      <td>148.93</td>
+    </tr>
+    <tr>
+      <th>427969</th>
+      <td>2011-02-26T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>2018018</td>
+      <td>225.12</td>
+    </tr>
+    <tr>
+      <th>432086</th>
+      <td>2011-12-01T00:00:00</td>
+      <td>andreia zito</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>2221748</td>
+      <td>344.02</td>
+    </tr>
+    <tr>
+      <th>492105</th>
+      <td>2011-08-02T00:00:00</td>
+      <td>domingos savio</td>
+      <td>domingos savio campos resende</td>
+      <td>Flight tickets</td>
+      <td>22275150668</td>
+      <td>2129592</td>
+      <td>335.51</td>
+    </tr>
+    <tr>
+      <th>495383</th>
+      <td>2011-05-07T00:00:00</td>
+      <td>danrlei de deus hinterholz</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>2072379</td>
+      <td>69.65</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>698180</th>
+      <td>2012-03-08T00:00:00</td>
+      <td>danrlei de deus hinterholz</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>2276733</td>
+      <td>342.00</td>
+    </tr>
+    <tr>
+      <th>698184</th>
+      <td>2012-03-08T00:00:00</td>
+      <td>danrlei de deus hinterholz</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Congressperson meal</td>
+      <td>92209790000561</td>
+      <td>2276751</td>
+      <td>2.50</td>
+    </tr>
+    <tr>
+      <th>758571</th>
+      <td>2012-11-13T00:00:00</td>
+      <td>nelson marchezan junior</td>
+      <td>joao rodrigues manta hoteis</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>2443187</td>
+      <td>136.20</td>
+    </tr>
+    <tr>
+      <th>758572</th>
+      <td>2012-11-14T00:00:00</td>
+      <td>nelson marchezan junior</td>
+      <td>joao rodrigues manta hoteis</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>2443190</td>
+      <td>162.00</td>
+    </tr>
+    <tr>
+      <th>813027</th>
+      <td>2013-09-19T00:00:00</td>
+      <td>henrique fontana</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000138</td>
+      <td>5225858</td>
+      <td>82.00</td>
+    </tr>
+    <tr>
+      <th>813028</th>
+      <td>2013-09-19T00:00:00</td>
+      <td>henrique fontana</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000138</td>
+      <td>5225871</td>
+      <td>82.00</td>
+    </tr>
+    <tr>
+      <th>813350</th>
+      <td>2013-10-31T00:00:00</td>
+      <td>henrique fontana</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000138</td>
+      <td>5283274</td>
+      <td>102.00</td>
+    </tr>
+    <tr>
+      <th>836188</th>
+      <td>2013-04-16T00:00:00</td>
+      <td>zezeu ribeiro</td>
+      <td>joao rodrigues dos passos</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>14369896000195</td>
+      <td>5092475</td>
+      <td>696.00</td>
+    </tr>
+    <tr>
+      <th>836189</th>
+      <td>2013-04-16T00:00:00</td>
+      <td>zezeu ribeiro</td>
+      <td>joao rodrigues dos passos</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>14369896000195</td>
+      <td>5092478</td>
+      <td>696.00</td>
+    </tr>
+    <tr>
+      <th>836190</th>
+      <td>2013-04-16T00:00:00</td>
+      <td>zezeu ribeiro</td>
+      <td>joao rodrigues dos passos</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>14369896000195</td>
+      <td>5092498</td>
+      <td>696.00</td>
+    </tr>
+    <tr>
+      <th>839636</th>
+      <td>2013-05-24T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5134625</td>
+      <td>332.00</td>
+    </tr>
+    <tr>
+      <th>839766</th>
+      <td>2013-07-26T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5179029</td>
+      <td>407.00</td>
+    </tr>
+    <tr>
+      <th>840173</th>
+      <td>2013-12-06T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5303182</td>
+      <td>264.00</td>
+    </tr>
+    <tr>
+      <th>888770</th>
+      <td>2013-05-31T00:00:00</td>
+      <td>zeca dirceu</td>
+      <td>avelino jorge silva martins restaurante ltda. me</td>
+      <td>Congressperson meal</td>
+      <td>10958567000129</td>
+      <td>5129670</td>
+      <td>88.00</td>
+    </tr>
+    <tr>
+      <th>922438</th>
+      <td>2013-03-14T00:00:00</td>
+      <td>jose stedile</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000138</td>
+      <td>5054687</td>
+      <td>164.00</td>
+    </tr>
+    <tr>
+      <th>1023597</th>
+      <td>2014-02-04T00:00:00</td>
+      <td>zezeu ribeiro</td>
+      <td>joao rodrigues dos passos</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>14369896000195</td>
+      <td>5327821</td>
+      <td>679.00</td>
+    </tr>
+    <tr>
+      <th>1025694</th>
+      <td>2014-03-04T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5364499</td>
+      <td>410.00</td>
+    </tr>
+    <tr>
+      <th>1025984</th>
+      <td>2014-07-07T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5468283</td>
+      <td>298.00</td>
+    </tr>
+    <tr>
+      <th>1026166</th>
+      <td>2014-12-20T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5581742</td>
+      <td>261.00</td>
+    </tr>
+    <tr>
+      <th>1081649</th>
+      <td>2014-09-11T00:00:00</td>
+      <td>edmar arruda</td>
+      <td>avelino jorge silva martins restaurante ltda. me</td>
+      <td>Congressperson meal</td>
+      <td>10958567000129</td>
+      <td>5525528</td>
+      <td>25.00</td>
+    </tr>
+    <tr>
+      <th>1171982</th>
+      <td>2015-05-09T00:00:00</td>
+      <td>luis carlos heinze</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5678440</td>
+      <td>481.00</td>
+    </tr>
+    <tr>
+      <th>1188632</th>
+      <td>2015-05-09T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5681455</td>
+      <td>413.00</td>
+    </tr>
+    <tr>
+      <th>1189044</th>
+      <td>2015-11-23T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis e turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000561</td>
+      <td>5869125</td>
+      <td>359.00</td>
+    </tr>
+    <tr>
+      <th>1235737</th>
+      <td>2015-08-13T00:00:00</td>
+      <td>edmar arruda</td>
+      <td>avelino jorge silva martins restaurante ltda. me</td>
+      <td>Congressperson meal</td>
+      <td>10958567000129</td>
+      <td>5790439</td>
+      <td>36.50</td>
+    </tr>
+    <tr>
+      <th>1291129</th>
+      <td>2015-08-15T00:00:00</td>
+      <td>jorge solla</td>
+      <td>joao rodrigues dos passos</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>14369896000195</td>
+      <td>5767733</td>
+      <td>150.00</td>
+    </tr>
+    <tr>
+      <th>1387978</th>
+      <td>2016-09-10T00:00:00</td>
+      <td>paulo pimenta</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000138</td>
+      <td>6101207</td>
+      <td>225.00</td>
+    </tr>
+    <tr>
+      <th>1387981</th>
+      <td>2016-09-10T00:00:00</td>
+      <td>paulo pimenta</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000138</td>
+      <td>6101235</td>
+      <td>149.00</td>
+    </tr>
+    <tr>
+      <th>1393591</th>
+      <td>2016-08-27T00:00:00</td>
+      <td>afonso hamm</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000138</td>
+      <td>6096523</td>
+      <td>231.00</td>
+    </tr>
+    <tr>
+      <th>1529752</th>
+      <td>2016-06-03T00:00:00</td>
+      <td>cajar nardes</td>
+      <td>joao rodrigues de souza</td>
+      <td>Congressperson meal</td>
+      <td>77888881000153</td>
+      <td>6017310</td>
+      <td>26.50</td>
+    </tr>
+    <tr>
+      <th>1530140</th>
+      <td>2016-09-17T00:00:00</td>
+      <td>cajar nardes</td>
+      <td>joao rodrigues manta hoteis de turismo ltda</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>92209790000138</td>
+      <td>6102209</td>
+      <td>374.00</td>
+    </tr>
+  </tbody>
+</table>
+<p>72 rows × 7 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">deputies</span><span class="p">[</span><span class="n">deputies</span><span class="o">.</span><span class="n">civil_name</span> <span class="o">==</span> <span class="s1">&#39;joao rodrigues&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>congressperson_id</th>
+      <th>civil_name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>240</th>
+      <td>160571</td>
+      <td>joao rodrigues</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>So far we've been searching for congresspeople putting money in others' companies. When paying for a non-relative congressperson may be legal, but could raise corruption suspicions when combined with other irregularities.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">deputies</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">rows</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;supplier&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;civil_name&#39;</span><span class="p">])</span> <span class="o">|</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;supplier&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;congressperson_name&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">rows</span><span class="p">,</span>
+         <span class="p">[</span><span class="s1">&#39;issue_date&#39;</span><span class="p">,</span> <span class="s1">&#39;congressperson_name&#39;</span><span class="p">,</span> <span class="s1">&#39;supplier&#39;</span><span class="p">,</span> <span class="s1">&#39;subquota_description&#39;</span><span class="p">,</span> <span class="s1">&#39;cnpj_cpf&#39;</span><span class="p">,</span> <span class="s1">&#39;document_id&#39;</span><span class="p">,</span> <span class="s1">&#39;total_net_value&#39;</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>issue_date</th>
+      <th>congressperson_name</th>
+      <th>supplier</th>
+      <th>subquota_description</th>
+      <th>cnpj_cpf</th>
+      <th>document_id</th>
+      <th>total_net_value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>41376</th>
+      <td>2009-06-22T00:00:00</td>
+      <td>assis do couto</td>
+      <td>assis do couto</td>
+      <td>Telecommunication</td>
+      <td>76535764000143</td>
+      <td>1618678</td>
+      <td>930.52</td>
+    </tr>
+    <tr>
+      <th>92265</th>
+      <td>2009-08-12T00:00:00</td>
+      <td>efraim filho</td>
+      <td>efraim filho</td>
+      <td>Flight tickets</td>
+      <td>02012862000160</td>
+      <td>1674474</td>
+      <td>1049.00</td>
+    </tr>
+    <tr>
+      <th>92432</th>
+      <td>2009-07-25T00:00:00</td>
+      <td>elismar prado</td>
+      <td>elismar prado</td>
+      <td>Flight tickets</td>
+      <td>02428624000130</td>
+      <td>1690970</td>
+      <td>290.00</td>
+    </tr>
+    <tr>
+      <th>182438</th>
+      <td>2010-06-07T00:00:00</td>
+      <td>arnon bezerra</td>
+      <td>arnon bezerra</td>
+      <td>Telecommunication</td>
+      <td>01009686007904</td>
+      <td>1887507</td>
+      <td>961.66</td>
+    </tr>
+    <tr>
+      <th>200406</th>
+      <td>2010-12-28T00:00:00</td>
+      <td>marcelo castro</td>
+      <td>marcelo costa e castro</td>
+      <td>Flight tickets</td>
+      <td>04114985000137</td>
+      <td>1985323</td>
+      <td>12000.00</td>
+    </tr>
+    <tr>
+      <th>204127</th>
+      <td>2010-08-27T00:00:00</td>
+      <td>paulo magalhaes</td>
+      <td>paulo sergio paranhos de magalhaes</td>
+      <td>Consultancy, research and technical work</td>
+      <td>06253998000112</td>
+      <td>1919603</td>
+      <td>8900.00</td>
+    </tr>
+    <tr>
+      <th>233647</th>
+      <td>2010-07-06T00:00:00</td>
+      <td>carlos manato</td>
+      <td>carlos humberto mannato</td>
+      <td>Telecommunication</td>
+      <td>04164616000159</td>
+      <td>1893988</td>
+      <td>361.92</td>
+    </tr>
+    <tr>
+      <th>233652</th>
+      <td>2010-07-19T00:00:00</td>
+      <td>carlos manato</td>
+      <td>carlos humberto mannato</td>
+      <td>Automotive vehicle renting or watercraft charter</td>
+      <td>57480788720</td>
+      <td>1894078</td>
+      <td>4500.00</td>
+    </tr>
+    <tr>
+      <th>295219</th>
+      <td>2010-01-25T00:00:00</td>
+      <td>laerte bessa</td>
+      <td>laerte rodrigues de bessa</td>
+      <td>Flight tickets</td>
+      <td>07575651000159</td>
+      <td>1763526</td>
+      <td>667.52</td>
+    </tr>
+    <tr>
+      <th>295220</th>
+      <td>2010-01-29T00:00:00</td>
+      <td>laerte bessa</td>
+      <td>laerte rodrigues de bessa</td>
+      <td>Flight tickets</td>
+      <td>07575651000159</td>
+      <td>1763527</td>
+      <td>774.52</td>
+    </tr>
+    <tr>
+      <th>296568</th>
+      <td>2010-10-12T00:00:00</td>
+      <td>lelo coimbra</td>
+      <td>welington coimbra</td>
+      <td>Flight tickets</td>
+      <td>34318100715</td>
+      <td>1944297</td>
+      <td>614.42</td>
+    </tr>
+    <tr>
+      <th>322194</th>
+      <td>2010-12-20T00:00:00</td>
+      <td>sueli vidigal</td>
+      <td>sueli vidigal</td>
+      <td>Flight tickets</td>
+      <td>45103305704</td>
+      <td>1980092</td>
+      <td>548.42</td>
+    </tr>
+    <tr>
+      <th>329507</th>
+      <td>2010-06-28T00:00:00</td>
+      <td>wandenkolk goncalves</td>
+      <td>wandenkolk goncalves</td>
+      <td>Flight tickets</td>
+      <td>02712394000136</td>
+      <td>1885944</td>
+      <td>3500.00</td>
+    </tr>
+    <tr>
+      <th>341245</th>
+      <td>2010-01-06T00:00:00</td>
+      <td>maia filho</td>
+      <td>jose de andrade maia filho</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>09967852007563</td>
+      <td>1775596</td>
+      <td>216.00</td>
+    </tr>
+    <tr>
+      <th>352401</th>
+      <td>2010-05-25T00:00:00</td>
+      <td>roberto balestra</td>
+      <td>roberto balestra</td>
+      <td>Congressperson meal</td>
+      <td>37329513000150</td>
+      <td>1855261</td>
+      <td>40.22</td>
+    </tr>
+    <tr>
+      <th>357224</th>
+      <td>2010-09-09T00:00:00</td>
+      <td>osvaldo reis</td>
+      <td>osvaldo reis</td>
+      <td>Consultancy, research and technical work</td>
+      <td>11819468000129</td>
+      <td>1921692</td>
+      <td>9000.00</td>
+    </tr>
+    <tr>
+      <th>370079</th>
+      <td>2010-11-23T00:00:00</td>
+      <td>abelardo lupion</td>
+      <td>abelardo lupion</td>
+      <td>Congressperson meal</td>
+      <td>10542662000147</td>
+      <td>1962945</td>
+      <td>337.48</td>
+    </tr>
+    <tr>
+      <th>376127</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941983</td>
+      <td>483.59</td>
+    </tr>
+    <tr>
+      <th>376128</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941996</td>
+      <td>301.42</td>
+    </tr>
+    <tr>
+      <th>376129</th>
+      <td>2010-10-02T00:00:00</td>
+      <td>darcisio perondi</td>
+      <td>darcisio paulo perondi</td>
+      <td>Telecommunication</td>
+      <td>08262748034</td>
+      <td>1941999</td>
+      <td>614.16</td>
+    </tr>
+    <tr>
+      <th>419169</th>
+      <td>2011-11-25T00:00:00</td>
+      <td>geraldo resende</td>
+      <td>geraldo resende</td>
+      <td>Flight tickets</td>
+      <td>02575829000148</td>
+      <td>2210046</td>
+      <td>421.23</td>
+    </tr>
+    <tr>
+      <th>447173</th>
+      <td>2011-07-22T00:00:00</td>
+      <td>gladson cameli</td>
+      <td>gladson cameli</td>
+      <td>Telecommunication</td>
+      <td>02449992009625</td>
+      <td>2124319</td>
+      <td>558.03</td>
+    </tr>
+    <tr>
+      <th>447175</th>
+      <td>2011-07-15T00:00:00</td>
+      <td>gladson cameli</td>
+      <td>gladson cameli</td>
+      <td>Flight tickets</td>
+      <td>84316421000116</td>
+      <td>2124473</td>
+      <td>600.00</td>
+    </tr>
+    <tr>
+      <th>471483</th>
+      <td>2011-04-01T00:00:00</td>
+      <td>sabino castelo branco</td>
+      <td>sabino castelo branco</td>
+      <td>Flight tickets</td>
+      <td>22949461204</td>
+      <td>2041689</td>
+      <td>25320.00</td>
+    </tr>
+    <tr>
+      <th>482319</th>
+      <td>2011-03-01T00:00:00</td>
+      <td>neri geller</td>
+      <td>neri geller</td>
+      <td>Congressperson meal</td>
+      <td>01410280000330</td>
+      <td>2018615</td>
+      <td>38.50</td>
+    </tr>
+    <tr>
+      <th>486600</th>
+      <td>2011-01-04T00:00:00</td>
+      <td>andre montoro</td>
+      <td>andre montoro</td>
+      <td>Flight tickets</td>
+      <td>01832635000118</td>
+      <td>1987856</td>
+      <td>867.24</td>
+    </tr>
+    <tr>
+      <th>492105</th>
+      <td>2011-08-02T00:00:00</td>
+      <td>domingos savio</td>
+      <td>domingos savio campos resende</td>
+      <td>Flight tickets</td>
+      <td>22275150668</td>
+      <td>2129592</td>
+      <td>335.51</td>
+    </tr>
+    <tr>
+      <th>507298</th>
+      <td>2011-10-27T00:00:00</td>
+      <td>edmar arruda</td>
+      <td>edmar arruda</td>
+      <td>Flight tickets</td>
+      <td>02012862001050</td>
+      <td>2208426</td>
+      <td>381.66</td>
+    </tr>
+    <tr>
+      <th>549986</th>
+      <td>2011-02-01T00:00:00</td>
+      <td>luciano moreira</td>
+      <td>luciano moreira</td>
+      <td>Flight tickets</td>
+      <td>04677358320</td>
+      <td>2002836</td>
+      <td>389.02</td>
+    </tr>
+    <tr>
+      <th>552237</th>
+      <td>2011-02-28T00:00:00</td>
+      <td>erivelton santana</td>
+      <td>erivelton santana</td>
+      <td>Fuels and lubricants</td>
+      <td>22989250549</td>
+      <td>2020304</td>
+      <td>100.00</td>
+    </tr>
+    <tr>
+      <th>568079</th>
+      <td>2011-02-07T00:00:00</td>
+      <td>mauricio dziedricki</td>
+      <td>mauricio dziedricki</td>
+      <td>Flight tickets</td>
+      <td>07575651000159</td>
+      <td>2005285</td>
+      <td>584.02</td>
+    </tr>
+    <tr>
+      <th>573893</th>
+      <td>2011-02-23T00:00:00</td>
+      <td>roberto balestra</td>
+      <td>roberto balestra</td>
+      <td>Congressperson meal</td>
+      <td>09054158000119</td>
+      <td>2013686</td>
+      <td>133.65</td>
+    </tr>
+    <tr>
+      <th>601842</th>
+      <td>2012-10-17T00:00:00</td>
+      <td>roberto freire</td>
+      <td>roberto freire</td>
+      <td>Flight tickets</td>
+      <td>02012862000160</td>
+      <td>2415333</td>
+      <td>1142.92</td>
+    </tr>
+    <tr>
+      <th>647608</th>
+      <td>2012-09-14T00:00:00</td>
+      <td>camilo cola</td>
+      <td>camilo cola</td>
+      <td>Flight tickets</td>
+      <td>02012862000160</td>
+      <td>2398333</td>
+      <td>402.13</td>
+    </tr>
+    <tr>
+      <th>695791</th>
+      <td>2012-04-26T00:00:00</td>
+      <td>zeca dirceu</td>
+      <td>jose carlos becker de oliveira e silva</td>
+      <td>Flight tickets</td>
+      <td>02012862000160</td>
+      <td>2351701</td>
+      <td>30.00</td>
+    </tr>
+    <tr>
+      <th>755752</th>
+      <td>2012-05-11T00:00:00</td>
+      <td>erika kokay</td>
+      <td>erika kokay</td>
+      <td>Flight tickets</td>
+      <td>22441107100</td>
+      <td>2339892</td>
+      <td>686.04</td>
+    </tr>
+    <tr>
+      <th>755775</th>
+      <td>2012-06-15T00:00:00</td>
+      <td>erika kokay</td>
+      <td>erika kokay</td>
+      <td>Flight tickets</td>
+      <td>07575651000159</td>
+      <td>2347187</td>
+      <td>723.47</td>
+    </tr>
+    <tr>
+      <th>755778</th>
+      <td>2012-06-15T00:00:00</td>
+      <td>erika kokay</td>
+      <td>erika kokay</td>
+      <td>Flight tickets</td>
+      <td>07575651000159</td>
+      <td>2352897</td>
+      <td>395.57</td>
+    </tr>
+    <tr>
+      <th>755797</th>
+      <td>2012-08-14T00:00:00</td>
+      <td>erika kokay</td>
+      <td>erika kokay</td>
+      <td>Automotive vehicle renting or watercraft charter</td>
+      <td>22441107100</td>
+      <td>2376750</td>
+      <td>97.21</td>
+    </tr>
+    <tr>
+      <th>755798</th>
+      <td>2012-08-14T00:00:00</td>
+      <td>erika kokay</td>
+      <td>erika kokay</td>
+      <td>Lodging, except for congressperson from Distri...</td>
+      <td>22441107100</td>
+      <td>2376754</td>
+      <td>258.72</td>
+    </tr>
+    <tr>
+      <th>760330</th>
+      <td>2012-05-06T00:00:00</td>
+      <td>hugo napoleao</td>
+      <td>hugo napoleao</td>
+      <td>Flight tickets</td>
+      <td>02012862000160</td>
+      <td>2318028</td>
+      <td>414.00</td>
+    </tr>
+    <tr>
+      <th>760331</th>
+      <td>2012-05-06T00:00:00</td>
+      <td>hugo napoleao</td>
+      <td>hugo napoleao</td>
+      <td>Flight tickets</td>
+      <td>02012862000160</td>
+      <td>2318032</td>
+      <td>527.00</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the previous query, many rows are false positives, given mistakes filling the form. Despite of CNPJ number is right, the supplier field was registered incorrectly, using the congressperson name.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
