@@ -62,27 +62,42 @@ deputies.civil_name = deputies.civil_name.apply(normalize_string)
 
 # In[8]:
 
-supplier_has_congressperson_name =     data['supplier'].isin(deputies['civil_name'])
-data.loc[supplier_has_congressperson_name,
-                   ['issue_date', 'congressperson_name', 'supplier', 'subquota_description', 'cnpj_cpf', 'document_id', 'total_net_value']]
+supplier_has_congressperson_name = data.supplier.isin(deputies['civil_name'])
 
 
 # In[9]:
 
-companies = pd.read_csv('../data/2016-09-03-companies.xz', low_memory=False)
+data[supplier_has_congressperson_name].shape
 
 
 # In[10]:
 
+data.loc[supplier_has_congressperson_name,
+                   ['issue_date', 'congressperson_name', 'supplier', 'subquota_description', 'cnpj_cpf', 'document_id', 'total_net_value']]
+
+
+# The above data shows all the reimbursement registers where the civil name of congressperson is equal to the supplier. 
+# Most of cases are incorrect data (e.g. airplane flight by TAM or GOL, but the deputy was typed as supplier).
+# But some of cases have the deputy´s CPF number and his name as the supplier and have no receipt attached.
+# They are old registers (2012 or before).
+# Maybe we should focus on these cases.
+
+# In[11]:
+
+companies = pd.read_csv('../data/2016-09-03-companies.xz', low_memory=False)
+
+
+# In[12]:
+
 companies['cnpj'].head()
 
 
-# In[11]:
+# In[13]:
 
 companies['cnpj'] = companies['cnpj'].str.replace(r'[\.\/\-]', '')
 
 
-# In[12]:
+# In[14]:
 
 data = pd.merge(data, companies,
        how='left',
@@ -90,19 +105,19 @@ data = pd.merge(data, companies,
        right_on='cnpj')
 
 
-# In[13]:
+# In[15]:
 
 data.name = data.name.apply(normalize_string)
 data.trade_name = data.trade_name.apply(normalize_string)
 
 
-# In[14]:
+# In[16]:
 
-suspect_row = data.supplier.isin(deputies['civil_name']) | data.name.isin(deputies['civil_name']) | data.trade_name.isin(deputies['civil_name']) 
+suspect_row = data.name.isin(deputies['civil_name']) | data.trade_name.isin(deputies['civil_name']) 
 data[suspect_row].shape
 
 
-# In[15]:
+# In[17]:
 
 import re
 
@@ -111,33 +126,34 @@ rows = data.supplier.apply(lambda name: regex.search(name) is not None)
 data[rows].shape
 
 
-# In[16]:
+# In[18]:
 
 data.loc[rows,
          ['issue_date', 'congressperson_name', 'supplier', 'subquota_description', 'cnpj_cpf', 'document_id', 'total_net_value']]
 
 
-# In[17]:
+# In[19]:
 
 deputies[deputies.civil_name == 'joao rodrigues']
 
 
 # So far we've been searching for congresspeople putting money in others' companies. When paying for a non-relative congressperson may be legal, but could raise corruption suspicions when combined with other irregularities.
 
-# In[18]:
+# In[20]:
 
 data = pd.merge(data, deputies, how='left')
 
 
-# In[19]:
+# In[23]:
 
 d = data.head()
 rows = (data['supplier'] == data['civil_name']) | (data['supplier'] == data['congressperson_name'])
 data.loc[rows,
-         ['issue_date', 'congressperson_name', 'supplier', 'subquota_description', 'cnpj_cpf', 'document_id', 'total_net_value']]
+         ['issue_date', 'congressperson_name', 'supplier', 'subquota_description', 'cnpj_cpf', 'legal_entity', 'document_id', 'total_net_value']]
 
 
 # In the previous query, many rows are false positives, given mistakes filling the form. Despite of CNPJ number is right, the supplier field was registered incorrectly, using the congressperson name.
+# There are no lines with legal_entity equals to 213-5 - EMPRESARIO (INDIVIDUAL)) as we guess.
 
 # In[ ]:
 
